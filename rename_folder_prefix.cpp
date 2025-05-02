@@ -89,3 +89,8 @@ int main(int argc, char* argv[]) {
 
     return 0;
 }
+
+// Example usage:
+// rename_folder_prefix.exe "C:\path\to\base_dir" "old_prefix" "new_prefix" --dry-run
+// rename_folder_prefix.exe "C:\path\to\base_dir" "old_prefix" "new_prefix" --ignore-case
+// rename_folder_prefix.exe "C:\path\to\base_dir" "old_prefix" "new_prefix" --dry-run --ignore-case
