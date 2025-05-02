@@ -31,10 +31,15 @@ void rename_folder_prefix(const std::string& base_dir, const std::string& old_pr
     }
 }
 
-int main() {
-    std::string base_dir = "resources";
-    std::string old_prefix = "vein-";
-    std::string new_prefix = "good-";
+int main(int argc, char* argv[]) {
+    if (argc != 4) {
+        std::cerr << "Usage: " << argv[0] << " <directory> <old_prefix> <new_prefix>\n";
+        return 1;
+    }
+
+    std::string base_dir = argv[1];
+    std::string old_prefix = argv[2];
+    std::string new_prefix = argv[3];
 
     rename_folder_prefix(base_dir, old_prefix, new_prefix);
 
